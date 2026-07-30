@@ -1,4 +1,4 @@
-const CACHE_NAME = 'appscreencontrol-parent-v2';
+const CACHE_NAME = 'appscreencontrol-parent-v10';
 
 self.addEventListener('install', (event) => {
   self.skipWaiting();
@@ -15,6 +15,7 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
+  // Always fetch fresh network first
   event.respondWith(
     fetch(event.request).catch(() => caches.match(event.request))
   );
