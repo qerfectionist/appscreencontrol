@@ -4,12 +4,13 @@
   "description": "Backend and Dashboard for Android Screen Time & Content Tracker",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "npm rebuild sqlite3 --build-from-source"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "pg": "^8.22.0",
-    "sqlite3": "^6.0.1"
+    "sqlite3": "^5.1.7"
   }
 }
