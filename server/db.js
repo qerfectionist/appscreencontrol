@@ -148,6 +148,11 @@ async function createSqliteTables() {
     );
   `);
 
+  // Migrate existing SQLite schema if column is missing
+  try {
+    await runAsync(`ALTER TABLE content_logs ADD COLUMN is_alert INTEGER DEFAULT 0;`);
+  } catch(e) {}
+
   await runAsync(`
     CREATE TABLE IF NOT EXISTS app_usage (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
