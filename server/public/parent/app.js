@@ -46,8 +46,19 @@ function renderUI() {
 
   currentKeywords = dev.keywords || [];
 
-  // Battery
-  document.getElementById('battery-chip').textContent = `🔋 ${dev.battery || 100}%`;
+  // Battery Indicator
+  const batVal = dev.battery || 100;
+  const batChip = document.getElementById('battery-chip');
+  batChip.textContent = `🔋 ${batVal}%`;
+  if (batVal < 20) {
+    batChip.style.background = 'rgba(255, 69, 58, 0.15)';
+    batChip.style.color = '#ff453a';
+    batChip.style.borderColor = 'rgba(255, 69, 58, 0.3)';
+  } else {
+    batChip.style.background = 'rgba(48, 209, 88, 0.15)';
+    batChip.style.color = '#30d158';
+    batChip.style.borderColor = 'rgba(48, 209, 88, 0.3)';
+  }
 
   // Instant Lock Toggle
   const limits = dev.limits || { maxDailyTimeSeconds: 0, isLocked: false, appLimits: {} };
@@ -60,7 +71,7 @@ function renderUI() {
     lockMsg.textContent = '🔒 Статус: ТЕЛЕФОН ЗАБЛОКИРОВАН';
   } else {
     lockMsg.className = 'lock-banner-msg';
-    lockMsg.textContent = '🟢 Статус: Телефон разблокирован';
+    lockMsg.textContent = '🟢 Статус: Доступ разрешен';
   }
 
   // Daily Limit & Time Used
@@ -100,14 +111,14 @@ function renderUI() {
 function updateTabSubtitles() {
   const b = devicesData['brother'];
   const s = devicesData['sister'];
-  if (b) document.getElementById('status-brother').textContent = `${b.isOnline ? 'В сети' : 'Офлайн'} • ${b.currentApp || 'Нет'}`;
-  if (s) document.getElementById('status-sister').textContent = `${s.isOnline ? 'В сети' : 'Офлайн'} • ${s.currentApp || 'Нет'}`;
+  if (b) document.getElementById('status-brother').textContent = `${b.isOnline ? 'В сети 🟢' : 'Офлайн ⚪'} • ${b.currentApp || 'Нет'}`;
+  if (s) document.getElementById('status-sister').textContent = `${s.isOnline ? 'В сети 🟢' : 'Офлайн ⚪'} • ${s.currentApp || 'Нет'}`;
 }
 
 function renderCategoryAnalytics(apps, totalSecs) {
   const container = document.getElementById('analytics-categories-list');
   if (!apps || apps.length === 0) {
-    container.innerHTML = '<div style="color: #94a3b8; font-size: 13px;">Статистика по категориям накапливается...</div>';
+    container.innerHTML = '<div style="color: var(--text-secondary); font-size: 13px; text-align: center; padding: 10px;">Статистика по категориям собирается...</div>';
     return;
   }
 
@@ -118,27 +129,27 @@ function renderCategoryAnalytics(apps, totalSecs) {
   }
 
   const categoryLabels = {
-    'Media': { label: '🎬 Медиа и Видео (YouTube/TikTok)', color: '#8b5cf6' },
-    'Social': { label: '💬 Соцсети (Instagram/Telegram)', color: '#ec4899' },
-    'Browsing': { label: '🌐 Поиск в интернете (Chrome)', color: '#06b6d4' },
-    'Games': { label: '🎮 Игры (Free Fire/Brawl Stars)', color: '#f59e0b' },
-    'Education': { label: '🎓 Обучение (Duolingo)', color: '#10b981' },
-    'Other': { label: '📱 Системные и Прочее', color: '#64748b' }
+    'Media': { label: '🎬 Медиа и Видео (YouTube/TikTok)', color: '#bf5af2' },
+    'Social': { label: '💬 Соцсети (Instagram/Telegram)', color: '#ff2d55' },
+    'Browsing': { label: '🌐 Поиск в интернете (Chrome)', color: '#64d2ff' },
+    'Games': { label: '🎮 Игры (Free Fire/Brawl Stars)', color: '#ff9f0a' },
+    'Education': { label: '🎓 Обучение (Duolingo)', color: '#30d158' },
+    'Other': { label: '📱 Системные и Прочее', color: '#8e8e93' }
   };
 
   container.innerHTML = Object.keys(categoryTotals).map(catKey => {
     const secs = categoryTotals[catKey];
-    const catMeta = categoryLabels[catKey] || { label: catKey, color: '#64748b' };
+    const catMeta = categoryLabels[catKey] || { label: catKey, color: '#8e8e93' };
     const pct = totalSecs > 0 ? Math.round((secs / totalSecs) * 100) : 0;
 
     return `
-      <div style="margin-bottom: 10px;">
-        <div style="display: flex; justify-content: space-between; font-size: 12px; color: #cbd5e1; margin-bottom: 4px;">
+      <div style="margin-bottom: 12px;">
+        <div style="display: flex; justify-content: space-between; font-size: 12px; color: #ffffff; margin-bottom: 4px; font-weight: 600;">
           <span>${catMeta.label}</span>
-          <span style="font-weight: 700; color: #fff;">${formatSeconds(secs)} (${pct}%)</span>
+          <span style="font-weight: 700; color: rgba(255,255,255,0.9);">${formatSeconds(secs)} (${pct}%)</span>
         </div>
-        <div style="height: 6px; background: #334155; border-radius: 4px; overflow: hidden;">
-          <div style="height: 100%; width: ${pct}%; background: ${catMeta.color}; border-radius: 4px; transition: width 0.3s ease;"></div>
+        <div style="height: 7px; background: rgba(120,120,128,0.24); border-radius: 9999px; overflow: hidden;">
+          <div style="height: 100%; width: ${pct}%; background: ${catMeta.color}; border-radius: 9999px; transition: width 0.4s ease;"></div>
         </div>
       </div>
     `;
@@ -170,14 +181,14 @@ function renderAppTimers(appLimits) {
 function renderKeywordChips(keywords) {
   const container = document.getElementById('keywords-chips-container');
   if (!keywords || keywords.length === 0) {
-    container.innerHTML = '<span style="color: #94a3b8; font-size: 12px;">Нет добавленных ключевых слов</span>';
+    container.innerHTML = '<span style="color: var(--text-secondary); font-size: 12px;">Нет ключевых слов</span>';
     return;
   }
 
   container.innerHTML = keywords.map(kw => `
-    <span style="background: #7f1d1d; color: #fca5a5; padding: 4px 10px; border-radius: 20px; font-size: 12px; display: inline-flex; align-items: center; gap: 6px; font-weight: 600;">
+    <span style="background: rgba(255, 69, 58, 0.18); color: #ff453a; border: 0.5px solid rgba(255, 69, 58, 0.35); padding: 5px 12px; border-radius: 20px; font-size: 12px; display: inline-flex; align-items: center; gap: 6px; font-weight: 600;">
       ⚠️ ${escapeHtml(kw)}
-      <button onclick="removeKeyword('${escapeHtml(kw)}')" style="background: none; border: none; color: #fca5a5; font-size: 14px; cursor: pointer; padding: 0;">&times;</button>
+      <button onclick="removeKeyword('${escapeHtml(kw)}')" style="background: none; border: none; color: #ff453a; font-size: 14px; cursor: pointer; padding: 0; line-height: 1;">&times;</button>
     </span>
   `).join('');
 }
@@ -198,7 +209,7 @@ async function removeKeyword(kw) {
 function renderFeed(logs) {
   const container = document.getElementById('parent-timeline-feed');
   if (logs.length === 0) {
-    container.innerHTML = '<div style="color: var(--text-muted); text-align: center; padding: 10px;">Активность еще не зафиксирована</div>';
+    container.innerHTML = '<div style="color: var(--text-secondary); text-align: center; padding: 12px; font-size: 13px;">Активность не зафиксирована</div>';
     return;
   }
 
@@ -209,13 +220,13 @@ function renderFeed(logs) {
     else if (log.type === 'search') icon = '🔍';
     else if (log.type === 'social') icon = '💬';
 
-    const alertStyle = log.isAlert || log.type === 'alert' ? 'border-left: 3px solid #ef4444; background: #450a0a; padding: 8px 12px; border-radius: 8px; margin-bottom: 6px;' : '';
+    const alertStyle = log.isAlert || log.type === 'alert' ? 'border-left: 3px solid #ff453a; background: rgba(255, 69, 58, 0.12); padding: 10px 14px; border-radius: 12px; margin-bottom: 6px;' : '';
 
     return `
       <div class="feed-item" style="${alertStyle}">
         <div class="feed-icon">${icon}</div>
         <div>
-          <div class="feed-title" style="${log.isAlert || log.type === 'alert' ? 'color: #fca5a5; font-weight: bold;' : ''}">${escapeHtml(log.app)}: ${escapeHtml(log.content)}</div>
+          <div class="feed-title" style="${log.isAlert || log.type === 'alert' ? 'color: #ff453a; font-weight: 700;' : ''}">${escapeHtml(log.app)}: ${escapeHtml(log.content)}</div>
           <div class="feed-time">${formatTimeAgo(log.timestamp)}</div>
         </div>
       </div>
@@ -229,7 +240,7 @@ function escapeHtml(text) {
   });
 }
 
-// Actions & Event Handlers
+// Event Handlers
 
 // Child Tab Switcher
 document.querySelectorAll('.child-tab').forEach(tab => {
@@ -307,13 +318,13 @@ document.getElementById('btn-save-limits').addEventListener('click', async () =>
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ deviceId: currentChild, appLimits: appLimits })
     });
-    alert('✅ Таймеры успешно сохранены!');
+    alert('✅ Лимиты успешно сохранены!');
     loadData();
   } catch (err) {
     console.error('Save limits error:', err);
   }
 });
 
-// Auto-refresh every 3s for live OTA updates
+// Auto-refresh every 3s
 loadData();
 setInterval(loadData, 3000);

@@ -2,52 +2,55 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>Родительский Контроль</title>
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#0f172a">
+  <meta name="theme-color" content="#000000">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="mobile-app-container">
-    <!-- Header -->
+    <!-- Apple Navigation Header -->
     <header class="app-header">
       <div class="header-top">
-        <div class="brand">
-          <div class="brand-logo">🛡️</div>
-          <div>
+        <div class="header-brand">
+          <div class="brand-icon">🛡️</div>
+          <div class="header-titles">
             <h1>Родительский Контроль</h1>
-            <div class="header-subtitle">⚡ Обновление по воздуху (OTA)</div>
+            <div class="header-subtitle">
+              <span style="width: 6px; height: 6px; background: #30d158; border-radius: 50%; display: inline-block;"></span>
+              24/7 Облачная Связь
+            </div>
           </div>
         </div>
         <div class="battery-chip" id="battery-chip">🔋 --%</div>
       </div>
 
-      <!-- Child Profile Tabs -->
-      <div class="child-tabs">
+      <!-- iOS Segmented Control Tab Switcher -->
+      <div class="segmented-control">
         <button class="child-tab active" data-child="brother" id="tab-brother">
           <span class="tab-avatar">👦</span>
-          <div class="tab-info">
+          <div class="tab-title-box">
             <span class="tab-name">Брат</span>
-            <span class="tab-sub" id="status-brother">Загрузка...</span>
+            <span class="tab-status" id="status-brother">Загрузка...</span>
           </div>
         </button>
         <button class="child-tab" data-child="sister" id="tab-sister">
           <span class="tab-avatar">👧</span>
-          <div class="tab-info">
+          <div class="tab-title-box">
             <span class="tab-name">Сестренка</span>
-            <span class="tab-sub" id="status-sister">Загрузка...</span>
+            <span class="tab-status" id="status-sister">Загрузка...</span>
           </div>
         </button>
       </div>
     </header>
 
-    <!-- Main Content -->
+    <!-- Main Content Area -->
     <main class="app-content">
 
       <!-- Emergency Lock Switch -->
@@ -55,7 +58,7 @@
         <div class="lock-banner-row">
           <div>
             <h3>🔒 Экстренная Блокировка</h3>
-            <p>Мгновенно заблокировать доступ к телефону</p>
+            <p>Заблокировать доступ к устройству</p>
           </div>
           <label class="switch">
             <input type="checkbox" id="toggle-instant-lock">
@@ -63,20 +66,21 @@
           </label>
         </div>
         <div id="lock-status-msg" class="lock-banner-msg">
-          Статус: Телефон разблокирован
+          🟢 Статус: Доступ разрешен
         </div>
       </section>
 
       <!-- Overall Daily Time Limit Card -->
       <section class="card">
+        <span class="section-label">Экранное время</span>
         <div class="card-title-row">
-          <h3>⏱️ Общий Дневной Лимит</h3>
+          <h3>⏱️ Дневной Лимит</h3>
           <span class="time-badge" id="daily-limit-badge">4 ч / день</span>
         </div>
 
         <div class="used-time-box">
           <span class="used-val" id="used-time-val">0 мин</span>
-          <span class="used-sub" id="used-time-sub">время за сегодня</span>
+          <span class="used-sub" id="used-time-sub">использовано за сегодня</span>
         </div>
 
         <div class="progress-bar-bg">
@@ -94,9 +98,9 @@
 
       <!-- Smart Analytics Section -->
       <section class="card">
+        <span class="section-label">Аналитика интересов</span>
         <div class="card-title-row">
-          <h3>📊 Аналитика интересов</h3>
-          <span class="panel-sub-tag">Категории за сегодня</span>
+          <h3>📊 Активность по категориям</h3>
         </div>
         <div id="analytics-categories-list" style="margin-top: 10px;">
           <!-- Dynamically populated category progress bars -->
@@ -105,28 +109,28 @@
 
       <!-- App Specific Timers Section -->
       <section class="card">
+        <span class="section-label">Ограничения приложений</span>
         <div class="card-title-row">
-          <h3>⏳ Таймеры приложений</h3>
-          <span class="panel-sub-tag">Установка лимитов на игры и соцсети</span>
+          <h3>⏳ Лимиты на игры и соцсети</h3>
         </div>
 
         <div class="app-timers-list" id="app-timers-list">
-          <!-- Dynamically populated with app timer controls -->
+          <!-- Dynamically populated app timer items -->
         </div>
 
-        <button class="btn-save-limits" id="btn-save-limits">💾 Сохранить изменения таймеров</button>
+        <button class="btn-save-limits" id="btn-save-limits">Сохранить лимиты</button>
       </section>
 
       <!-- Keyword Alert System Section -->
-      <section class="card" style="border-left: 4px solid #ef4444;">
+      <section class="card" style="border-left: 3px solid #ff453a;">
+        <span class="section-label" style="color: #ff453a;">Безопасность поиска</span>
         <div class="card-title-row">
           <h3>🚨 Детектор опасных слов</h3>
-          <span class="panel-sub-tag" style="color: #f87171;">Фильтр поиска и видео</span>
         </div>
 
-        <div style="display: flex; gap: 8px; margin-top: 12px;">
-          <input type="text" id="input-new-keyword" placeholder="Добавить слово (напр. ставка)" style="flex: 1; padding: 10px; border-radius: 10px; border: 1px solid #334155; background: #1e293b; color: #fff; font-size: 14px;">
-          <button id="btn-add-keyword" style="padding: 10px 16px; background: #ef4444; border: none; border-radius: 10px; color: #fff; font-weight: 700; cursor: pointer;">+ Добавить</button>
+        <div style="display: flex; gap: 8px; margin-top: 10px;">
+          <input type="text" id="input-new-keyword" placeholder="Слово-триггер (напр. ставка)" style="flex: 1; padding: 10px 14px; border-radius: 12px; border: 0.5px solid rgba(255,255,255,0.15); background: rgba(118,118,128,0.2); color: #fff; font-size: 13px; outline: none;">
+          <button id="btn-add-keyword" style="padding: 10px 16px; background: #ff453a; border: none; border-radius: 12px; color: #fff; font-weight: 700; font-size: 13px; cursor: pointer; box-shadow: 0 4px 12px rgba(255,69,58,0.3);">+ Добавить</button>
         </div>
 
         <div id="keywords-chips-container" style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px;">
@@ -134,8 +138,9 @@
         </div>
       </section>
 
-      <!-- Live Monitoring & What They Watched Feed -->
+      <!-- Live Activity Feed -->
       <section class="card">
+        <span class="section-label">Мониторинг</span>
         <div class="card-title-row">
           <h3>👁️ Что смотрит прямо сейчас</h3>
         </div>
@@ -147,13 +152,13 @@
 
     </main>
 
-    <!-- Navigation / Install PWA Banner -->
+    <!-- Navigation / Footer -->
     <footer class="app-footer">
-      <p>✨ Работает прямо в браузере и обновляется без скачивания файлов.</p>
+      <p>🛡️ Apple HIG Design System • 24/7 Cloud Protected</p>
     </footer>
   </div>
 
-  <script src="app.js?v=3"></script>
+  <script src="app.js?v=4"></script>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js').catch(err => console.log('SW reg error:', err));
