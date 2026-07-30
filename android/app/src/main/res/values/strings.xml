@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AppScreenControl</string>
+    <string name="accessibility_description">Мониторинг просматриваемого контента для родительского контроля (AppScreenControl)</string>
+</resources>

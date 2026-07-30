@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\qerfe\\.gradle\\daemon\\8.5\\com.appscreencontrol.tracker.app-mergeDebugResources-37:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\qerfe\\.gradle\\daemon\\8.5\\com.appscreencontrol.tracker.app-main-40:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.appscreencontrol.tracker.app-mergeDebugResources-37:/layout/activity_main.xml",
+        "source": "com.appscreencontrol.tracker.app-main-40:/layout/activity_main.xml"
+    }
+]

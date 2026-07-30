@@ -1,0 +1,951 @@
+{
+  "devices": {
+    "brother": {
+      "id": "brother",
+      "name": "Брат",
+      "model": "Android Device",
+      "battery": 63,
+      "isOnline": true,
+      "lastSeen": "2026-07-30T16:58:34.186Z",
+      "currentApp": "Настройки AppScreenControl",
+      "totalScreenTimeSeconds": 0,
+      "apps": [],
+      "logs": [],
+      "limits": {
+        "maxDailyTimeSeconds": 14400,
+        "isLocked": false,
+        "appLimits": {}
+      }
+    },
+    "sister": {
+      "id": "sister",
+      "name": "Сестренка",
+      "model": "Android Device",
+      "battery": 57,
+      "isOnline": true,
+      "lastSeen": "2026-07-30T17:30:15.614Z",
+      "currentApp": "Настройки AppScreenControl",
+      "totalScreenTimeSeconds": 26403,
+      "apps": [
+        {
+          "packageName": "com.google.android.apps.subscriptions.red",
+          "label": "red",
+          "seconds": 113,
+          "category": "Other"
+        },
+        {
+          "packageName": "com.google.android.googlequicksearchbox",
+          "label": "googlequicksearchbox",
+          "seconds": 40,
+          "category": "Other"
+        },
+        {
+          "packageName": "org.telegram.messenger",
+          "label": "Telegram",
+          "seconds": 1845,
+          "category": "Social"
+        },
+        {
+          "packageName": "com.replit.app",
+          "label": "app",
+          "seconds": 31,
+          "category": "Other"
+        },
+        {
+          "packageName": "com.whatsapp",
+          "label": "whatsapp",
+          "seconds": 898,
+          "category": "Other"
+        },
+        {
+          "packageName": "com.discord",
+          "label": "discord",
+          "seconds": 88,
+          "category": "Other"
+        },
+        {
+          "packageName": "com.android.vending",
+          "label": "vending",
+          "seconds": 270,
+          "category": "Other"
+        },
+        {
+          "packageName": "ffinbank.MyFreedom",
+          "label": "MyFreedom",
+          "seconds": 172,
+          "category": "Other"
+        },
+        {
+          "packageName": "com.instagram.android",
+          "label": "Instagram",
+          "seconds": 2578,
+          "category": "Social"
+        },
+        {
+          "packageName": "com.deepseek.chat",
+          "label": "chat",
+          "seconds": 2012,
+          "category": "Other"
+        },
+        {
+          "packageName": "com.google.android.gm",
+          "label": "gm",
+          "seconds": 32,
+          "category": "Other"
+        },
+        {
+          "packageName": "ru.yandex.taxi",
+          "label": "taxi",
+          "seconds": 52,
+          "category": "Other"
+        },
+        {
+          "packageName": "com.miui.global.packageinstaller",
+          "label": "packageinstaller",
+          "seconds": 51,
+          "category": "Other"
+        },
+        {
+          "packageName": "com.instagram.barcelona",
+          "label": "Instagram",
+          "seconds": 7032,
+          "category": "Social"
+        },
+        {
+          "packageName": "com.twitter.android",
+          "label": "android",
+          "seconds": 444,
+          "category": "Other"
+        },
+        {
+          "packageName": "com.android.chrome",
+          "label": "Chrome",
+          "seconds": 3228,
+          "category": "Browsing"
+        },
+        {
+          "packageName": "com.google.android.gms",
+          "label": "gms",
+          "seconds": 161,
+          "category": "Other"
+        },
+        {
+          "packageName": "kz.kaspi.mobile",
+          "label": "mobile",
+          "seconds": 126,
+          "category": "Other"
+        },
+        {
+          "packageName": "com.miui.calculator",
+          "label": "calculator",
+          "seconds": 38,
+          "category": "Other"
+        },
+        {
+          "packageName": "cn.wps.moffice_eng",
+          "label": "moffice_eng",
+          "seconds": 35,
+          "category": "Other"
+        },
+        {
+          "packageName": "com.miui.home",
+          "label": "home",
+          "seconds": 266,
+          "category": "Other"
+        },
+        {
+          "packageName": "com.google.android.googlequicksearchbox",
+          "label": "googlequicksearchbox",
+          "seconds": 49,
+          "category": "Other"
+        },
+        {
+          "packageName": "app.revanced.android.youtube",
+          "label": "YouTube",
+          "seconds": 39,
+          "category": "Media"
+        },
+        {
+          "packageName": "com.whatsapp",
+          "label": "whatsapp",
+          "seconds": 192,
+          "category": "Other"
+        },
+        {
+          "packageName": "com.google.android.apps.messaging",
+          "label": "messaging",
+          "seconds": 1034,
+          "category": "Other"
+        },
+        {
+          "packageName": "com.miui.securitycenter",
+          "label": "securitycenter",
+          "seconds": 62,
+          "category": "Other"
+        },
+        {
+          "packageName": "ffinbank.MyFreedom",
+          "label": "MyFreedom",
+          "seconds": 403,
+          "category": "Other"
+        },
+        {
+          "packageName": "com.instagram.android",
+          "label": "Instagram",
+          "seconds": 2462,
+          "category": "Social"
+        },
+        {
+          "packageName": "com.google.android.gm",
+          "label": "gm",
+          "seconds": 237,
+          "category": "Other"
+        },
+        {
+          "packageName": "com.instagram.barcelona",
+          "label": "Instagram",
+          "seconds": 293,
+          "category": "Social"
+        },
+        {
+          "packageName": "com.android.chrome",
+          "label": "Chrome",
+          "seconds": 134,
+          "category": "Browsing"
+        },
+        {
+          "packageName": "com.android.settings",
+          "label": "settings",
+          "seconds": 65,
+          "category": "Other"
+        },
+        {
+          "packageName": "com.appscreencontrol.tracker",
+          "label": "tracker",
+          "seconds": 455,
+          "category": "Other"
+        },
+        {
+          "packageName": "com.miui.home",
+          "label": "home",
+          "seconds": 1466,
+          "category": "Other"
+        }
+      ],
+      "logs": [
+        {
+          "id": "log_1785432615614",
+          "timestamp": "2026-07-30T17:30:15.614Z",
+          "app": "Настройки AppScreenControl",
+          "content": "Открыто приложение: Настройки AppScreenControl",
+          "type": "app"
+        },
+        {
+          "id": "log_1785432139611_obqn0",
+          "timestamp": "2026-07-30T17:22:19.611Z",
+          "app": "Instagram",
+          "content": "Фото профиля tristanvonstaden • tristanvonstaden • Rihanna · Umbrella (feat. JAŸ-Z)",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432139451_lksyj",
+          "timestamp": "2026-07-30T17:22:19.451Z",
+          "app": "Instagram",
+          "content": "massage.core поставил(-а) \"Нравится\" этому видео Reels • Фото профиля mayorchek • mayorchek",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432135100_ngqh0",
+          "timestamp": "2026-07-30T17:22:15.100Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Ответить • Перейти в профиль i_mamu_tvou_lubil1488",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432134430_f7uq7",
+          "timestamp": "2026-07-30T17:22:14.430Z",
+          "app": "Instagram",
+          "content": "@2131955481 • @funded_hdcb99 снижения выработки кортизола • @funded_hdcb99",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432133040_yw5nt",
+          "timestamp": "2026-07-30T17:22:13.040Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Посмотреть историю __daria_oknenamor_ • Ответить",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432132785_fas9g",
+          "timestamp": "2026-07-30T17:22:12.785Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Перейти в профиль funded_hdcb99 • Ответить",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432132270_stznl",
+          "timestamp": "2026-07-30T17:22:12.270Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Ответить • Cмотреть ещё 5 ответов",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432129563_dnfkb",
+          "timestamp": "2026-07-30T17:22:09.563Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Ответить • Cмотреть ещё 1 ответ",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432129110_1up9z",
+          "timestamp": "2026-07-30T17:22:09.110Z",
+          "app": "Instagram",
+          "content": "@2131955481 • После обеда самое сложное дожить до конца рабочего дня • Ответить",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432124433_if5m5",
+          "timestamp": "2026-07-30T17:22:04.433Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Перейти в профиль make_me_famous131 • Ответить",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432123211_zbrfe",
+          "timestamp": "2026-07-30T17:22:03.212Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Фото профиля • Оставьте комментарий для mayorchek",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432116421_hqmwl",
+          "timestamp": "2026-07-30T17:21:56.421Z",
+          "app": "Instagram",
+          "content": "massage.core поставил(-а) \"Нравится\" этому видео Reels • Фото профиля mayorchek • mayorchek",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432115663_mgwwi",
+          "timestamp": "2026-07-30T17:21:55.663Z",
+          "app": "Instagram",
+          "content": "Видео Reels от avc.academy. Нажмите дважды, чтобы воспроизвести или приостановить. • Test ClipsSingleImageAdsComponent • Фото профиля avc.academy",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432114693_jrfs4",
+          "timestamp": "2026-07-30T17:21:54.693Z",
+          "app": "Instagram",
+          "content": "ruslantai поставил(-а) \"Нравится\" этому видео Reels • Фото профиля nareksimonyan • nareksimonyan",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432099674_ez64m",
+          "timestamp": "2026-07-30T17:21:39.674Z",
+          "app": "Instagram",
+          "content": "ruslantai поставил(-а) \"Нравится\" этому видео Reels • Фото профиля nareksimonyan • nareksimonyan",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432098875_2rh55",
+          "timestamp": "2026-07-30T17:21:38.875Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Не все поймут прикол, но это гениально 🤣 • Ответить",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432094861_z95ab",
+          "timestamp": "2026-07-30T17:21:34.861Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Перейти в профиль shobogoralexandr • Ответить",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432094538_4oxq6",
+          "timestamp": "2026-07-30T17:21:34.538Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Фото профиля • Присоединяйтесь к обсуждению...",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432088068_7pzxn",
+          "timestamp": "2026-07-30T17:21:28.068Z",
+          "app": "Instagram",
+          "content": "ruslantai поставил(-а) \"Нравится\" этому видео Reels • Фото профиля nareksimonyan • nareksimonyan",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432087967_bjldo",
+          "timestamp": "2026-07-30T17:21:27.967Z",
+          "app": "Instagram",
+          "content": "Видео Reels от Licensed partner. Нажмите дважды, чтобы воспроизвести или приостановить. • ruslantai поставил(-а) \"Нравится\" этому видео Reels • Фото профиля nareksimonyan",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432087144_31qdh",
+          "timestamp": "2026-07-30T17:21:27.144Z",
+          "app": "Instagram",
+          "content": "Видео Reels от Licensed partner. Нажмите дважды, чтобы воспроизвести или приостановить. • Фото профиля partner_licensed • Licensed partner",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432087032_pg22b",
+          "timestamp": "2026-07-30T17:21:27.032Z",
+          "app": "Instagram",
+          "content": "Фото профиля travelingwithrichard • travelingwithrichard • Перевести с помощью ИИ",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432083012_s0unc",
+          "timestamp": "2026-07-30T17:21:23.012Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Посмотреть историю welcometraveluz • 2 нед.",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432082466_37zg4",
+          "timestamp": "2026-07-30T17:21:22.466Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Фото профиля • Что вы об этом думаете?",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432076574_mimas",
+          "timestamp": "2026-07-30T17:21:16.574Z",
+          "app": "Instagram",
+          "content": "16 hour train ride in Kazakhstan and how much it costs! 🇰🇿💰 • 16 hour train ride in Kazakhstan and how much it costs! 🇰🇿💰 • Фото профиля travelingwithrichard",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432075695_c4j18",
+          "timestamp": "2026-07-30T17:21:15.695Z",
+          "app": "Instagram",
+          "content": "Видео Reels от Blisstrade. Нажмите дважды, чтобы воспроизвести или приостановить. • Фото профиля doanle5356 • Blisstrade",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432064882_ijrs5",
+          "timestamp": "2026-07-30T17:21:04.882Z",
+          "app": "Instagram",
+          "content": "aidynturlann прокомментировал(-а): • Фото профиля kirillsedlovskiy • kirillsedlovskiy",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432054468_ezhuf",
+          "timestamp": "2026-07-30T17:20:54.468Z",
+          "app": "Instagram",
+          "content": "Настройки • Чт, 30 Июл • +7 778 917 3334",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432051635_qcjtj",
+          "timestamp": "2026-07-30T17:20:51.635Z",
+          "app": "Instagram",
+          "content": "aidynturlann прокомментировал(-а): • Фото профиля kirillsedlovskiy • kirillsedlovskiy",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432049333_z1um9",
+          "timestamp": "2026-07-30T17:20:49.333Z",
+          "app": "Instagram",
+          "content": "@2131955481 • @w.lizzzun Хоть кто-то обратил внимание😂😂😂 • @w.lizzzun",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432049285_f1czt",
+          "timestamp": "2026-07-30T17:20:49.285Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Перейти в профиль kirillsedlovskiy • @w.lizzzun Хоть кто-то обратил внимание😂😂😂",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432045995_g9jm0",
+          "timestamp": "2026-07-30T17:20:45.995Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Ответить • Перейти в профиль kirillsedlovskiy",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432045820_djbef",
+          "timestamp": "2026-07-30T17:20:45.820Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Перейти в профиль w.lizzzun • Перевернуть стул на колесиках, чтобы показать этот шедевр со всех сторон😂😂😂",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432040634_knvn2",
+          "timestamp": "2026-07-30T17:20:40.634Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Перейти в профиль w.lizzzun • Ответить",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432038773_j4tic",
+          "timestamp": "2026-07-30T17:20:38.773Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Фото профиля • Оставьте комментарий для kirillsedlovskiy",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432025877_j3kgj",
+          "timestamp": "2026-07-30T17:20:25.877Z",
+          "app": "Instagram",
+          "content": "aidynturlann прокомментировал(-а): • Фото профиля kirillsedlovskiy • kirillsedlovskiy",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432025381_xbwcz",
+          "timestamp": "2026-07-30T17:20:25.381Z",
+          "app": "Instagram",
+          "content": "Фото профиля hunter__workman • hunter__workman • sometimes jah · inner city grooves",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432025046_qmni5",
+          "timestamp": "2026-07-30T17:20:25.046Z",
+          "app": "Instagram",
+          "content": "hunter__workman • Параметры • непросмотренная история hunter__workman",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432020215_0w658",
+          "timestamp": "2026-07-30T17:20:20.215Z",
+          "app": "Instagram",
+          "content": "Фото профиля hunter__workman • hunter__workman • twoflow, Delaney Jane · all my exes miss me",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432010967_yedqj",
+          "timestamp": "2026-07-30T17:20:10.967Z",
+          "app": "Instagram",
+          "content": "Фото профиля hunter__workman • hunter__workman • no regrets · should've never loved you",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785432010015_we8uh",
+          "timestamp": "2026-07-30T17:20:10.015Z",
+          "app": "Instagram",
+          "content": "Фото профиля hunter__workman • hunter__workman • Secret VIP · Shut Up And Dance",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431994886_xsmxt",
+          "timestamp": "2026-07-30T17:19:54.886Z",
+          "app": "Instagram",
+          "content": "Фото профиля hunter__workman • hunter__workman • Secret VIP · Shut Up And Dance",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431994807_rw6um",
+          "timestamp": "2026-07-30T17:19:54.807Z",
+          "app": "Instagram",
+          "content": "Видео Reels от hunter__workman. Нажмите дважды, чтобы воспроизвести или приостановить. • Фото профиля hunter__workman • hunter__workman",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431993623_0zhdz",
+          "timestamp": "2026-07-30T17:19:53.623Z",
+          "app": "Instagram",
+          "content": "Фото профиля hunter__workman • hunter__workman • Joshwa · Out of My Mind",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431978698_1y2br",
+          "timestamp": "2026-07-30T17:19:38.698Z",
+          "app": "Instagram",
+          "content": "Фото профиля hunter__workman • hunter__workman • Joshwa · Out of My Mind",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431978544_ohxu2",
+          "timestamp": "2026-07-30T17:19:38.544Z",
+          "app": "Instagram",
+          "content": "Фото профиля hunter__workman • hunter__workman • sometimes jah · inner city grooves",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431977844_1ow2d",
+          "timestamp": "2026-07-30T17:19:37.844Z",
+          "app": "Instagram",
+          "content": "Видео Reels от hunter__workman. Нажмите дважды, чтобы воспроизвести или приостановить. • Видео Reels за авторством hunter__workman. Нажмите дважды, чтобы воспроизвести или приостановить. • Фото профиля hunter__workman",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431975439_8d4p0",
+          "timestamp": "2026-07-30T17:19:35.439Z",
+          "app": "Instagram",
+          "content": "hunter__workman • Параметры • непросмотренная история hunter__workman",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431973817_yzocg",
+          "timestamp": "2026-07-30T17:19:33.817Z",
+          "app": "Instagram",
+          "content": "Фото профиля hunter__workman • hunter__workman • sometimes jah · inner city grooves",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431973472_yxt0q",
+          "timestamp": "2026-07-30T17:19:33.472Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Новая группа • AIDANA ☾ INFLUNCER UGC ASTANA Чат выбран",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431971352_pvsgy",
+          "timestamp": "2026-07-30T17:19:31.352Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Новая группа • AIDANA ☾ INFLUNCER UGC ASTANA Чат не выбран",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431963611_jfnn1",
+          "timestamp": "2026-07-30T17:19:23.611Z",
+          "app": "Instagram",
+          "content": "Фото профиля hunter__workman • hunter__workman • sometimes jah · inner city grooves",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431962474_km2yg",
+          "timestamp": "2026-07-30T17:19:22.474Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Перейти в профиль mlsxxnzzz • Ответить",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431961679_pdtum",
+          "timestamp": "2026-07-30T17:19:21.679Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Ответить • Cмотреть ещё 1 ответ",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431961118_m3rpd",
+          "timestamp": "2026-07-30T17:19:21.118Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Перейти в профиль benjamin.w19 • Ответить",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431960951_eluhy",
+          "timestamp": "2026-07-30T17:19:20.951Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Cмотреть ещё 6 ответов • Перейти в профиль benjamin.w19",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431960818_1fafd",
+          "timestamp": "2026-07-30T17:19:20.818Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Ответить • Показать перевод",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431959747_w4jyo",
+          "timestamp": "2026-07-30T17:19:19.747Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Перейти в профиль the_jabbawockee • Ответить",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431949507_vka4x",
+          "timestamp": "2026-07-30T17:19:09.507Z",
+          "app": "Instagram",
+          "content": "Фото профиля hunter__workman • hunter__workman • sometimes jah · inner city grooves",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431947045_il0g2",
+          "timestamp": "2026-07-30T17:19:07.045Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Перейти в профиль the_jabbawockee • Ответить",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431946250_kf6dg",
+          "timestamp": "2026-07-30T17:19:06.250Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Фото профиля • Оставьте комментарий для hunter__workman",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431936648_uvcg2",
+          "timestamp": "2026-07-30T17:18:56.648Z",
+          "app": "Instagram",
+          "content": "Фото профиля hunter__workman • hunter__workman • sometimes jah · inner city grooves",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431936502_fmi0s",
+          "timestamp": "2026-07-30T17:18:56.502Z",
+          "app": "Instagram",
+          "content": "Слайдер • Видео Reels от ai.school.kz. Нажмите дважды, чтобы воспроизвести или приостановить. • Рекламное видео Reels за авторством ai.school.kz. Нажмите дважды, чтобы воспроизвести или приостановить.",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431931537_a2zux",
+          "timestamp": "2026-07-30T17:18:51.537Z",
+          "app": "Instagram",
+          "content": "Фото профиля ai.school.kz • ai.school.kz • Подписаться",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431925250_yfpbx",
+          "timestamp": "2026-07-30T17:18:45.250Z",
+          "app": "Instagram",
+          "content": "Фото профиля languyofficial • languyofficial • Подписаться",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431925153_5ch2m",
+          "timestamp": "2026-07-30T17:18:45.153Z",
+          "app": "Instagram",
+          "content": "Видео Reels от languyofficial. Нажмите дважды, чтобы воспроизвести или приостановить. • Видео Reels за авторством languyofficial. Нажмите дважды, чтобы воспроизвести или приостановить. • Фото профиля languyofficial",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431920227_y9nf7",
+          "timestamp": "2026-07-30T17:18:40.227Z",
+          "app": "Instagram",
+          "content": "Видео Reels от yalmurzenko. Нажмите дважды, чтобы воспроизвести или приостановить. • Видео Reels за авторством yalmurzenko. Нажмите дважды, чтобы воспроизвести или приостановить. • Фото профиля yalmurzenko",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431917215_p5jfx",
+          "timestamp": "2026-07-30T17:18:37.215Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Перейти в профиль vergilysparda • Мало кто знает но в Фильме Одиссея Циклоп реально сожрал один из солдатов Одиссея но Кристофер Нолану так понравился это импровизация что он решил оставить его в фильме",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431915777_j5h22",
+          "timestamp": "2026-07-30T17:18:35.777Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Перейти в профиль vergilysparda • Ответить",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431915232_agkzq",
+          "timestamp": "2026-07-30T17:18:35.232Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Мало кто знает но в Фильме Одиссея Циклоп реально сожрал один из солдатов Одиссея но Кристофер Нолану так понравился это импровизация что он решил оставить его в фильме • Ответить",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431915007_zn311",
+          "timestamp": "2026-07-30T17:18:35.007Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Перейти в профиль vergilysparda • Ответить",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431914458_up0fj",
+          "timestamp": "2026-07-30T17:18:34.458Z",
+          "app": "Instagram",
+          "content": "@2131955481 • @alisa__akimova факт • @alisa__akimova",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431912968_i8mi4",
+          "timestamp": "2026-07-30T17:18:32.968Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Перейти в профиль leva.the.best • Вот вы смеетесь,а Мэтт Дэймон домой с 2006 года попасть не может",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431908721_ra71u",
+          "timestamp": "2026-07-30T17:18:28.721Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Перейти в профиль leva.the.best • Ответить",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431907546_tekmi",
+          "timestamp": "2026-07-30T17:18:27.546Z",
+          "app": "Instagram",
+          "content": "@2131955481 • Фото профиля • Присоединяйтесь к обсуждению...",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431902741_mwb3r",
+          "timestamp": "2026-07-30T17:18:22.741Z",
+          "app": "Instagram",
+          "content": "Видео Reels от yalmurzenko. Нажмите дважды, чтобы воспроизвести или приостановить. • Видео Reels за авторством yalmurzenko. Нажмите дважды, чтобы воспроизвести или приостановить. • Фото профиля yalmurzenko",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431887982_l9rlg",
+          "timestamp": "2026-07-30T17:18:07.982Z",
+          "app": "Instagram",
+          "content": "Видео Reels от yalmurzenko. Нажмите дважды, чтобы воспроизвести или приостановить. • Видео Reels за авторством yalmurzenko. Нажмите дважды, чтобы воспроизвести или приостановить. • Фото профиля yalmurzenko",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431886939_1aplj",
+          "timestamp": "2026-07-30T17:18:06.939Z",
+          "app": "Instagram",
+          "content": "Центр управления • Модуль Bluetooth включен. • 4G Надежный телефонный сигнал.",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431886871_45271",
+          "timestamp": "2026-07-30T17:18:06.871Z",
+          "app": "Instagram",
+          "content": "Центр управления • Чт, 30 Июл • Модуль NFC",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431886578_c4xjh",
+          "timestamp": "2026-07-30T17:18:06.578Z",
+          "app": "Instagram",
+          "content": "Центр управления • Модуль Bluetooth включен. • 4G Надежный телефонный сигнал.",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431880127_xrl1d",
+          "timestamp": "2026-07-30T17:18:00.127Z",
+          "app": "Instagram",
+          "content": "Google Ассистент • Google Ассистент • Специальные возможности",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431879584_pbv8l",
+          "timestamp": "2026-07-30T17:17:59.584Z",
+          "app": "Instagram",
+          "content": "Видео Reels от yalmurzenko. Нажмите дважды, чтобы воспроизвести или приостановить. • Видео Reels за авторством yalmurzenko. Нажмите дважды, чтобы воспроизвести или приостановить. • Фото профиля yalmurzenko",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431876851_t4pz6",
+          "timestamp": "2026-07-30T17:17:56.851Z",
+          "app": "Instagram",
+          "content": "Видео Reels от yalmurzenko. Нажмите дважды, чтобы воспроизвести или приостановить. • Видео Reels за авторством yalmurzenko. Нажмите дважды, чтобы воспроизвести или приостановить. • Выключить звук",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431876405_2jmtc",
+          "timestamp": "2026-07-30T17:17:56.405Z",
+          "app": "Instagram",
+          "content": "Видео Reels от yalmurzenko. Нажмите дважды, чтобы воспроизвести или приостановить. • Видео Reels за авторством yalmurzenko. Нажмите дважды, чтобы воспроизвести или приостановить. • Фото профиля yalmurzenko",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431874354_wsodw",
+          "timestamp": "2026-07-30T17:17:54.354Z",
+          "app": "Instagram",
+          "content": "Google Ассистент • Google Ассистент • Специальные возможности",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431862870_wukco",
+          "timestamp": "2026-07-30T17:17:42.870Z",
+          "app": "Instagram",
+          "content": "Видео Reels от yalmurzenko. Нажмите дважды, чтобы воспроизвести или приостановить. • Видео Reels за авторством yalmurzenko. Нажмите дважды, чтобы воспроизвести или приостановить. • Фото профиля yalmurzenko",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431856341_byiyk",
+          "timestamp": "2026-07-30T17:17:36.341Z",
+          "app": "Instagram",
+          "content": "Открыть историю 1baydos • 1baydos • Бизнес-чат",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431855663_80mcp",
+          "timestamp": "2026-07-30T17:17:35.663Z",
+          "app": "Instagram",
+          "content": "Фото 1 из 6 от SETTERS MEDIA, Нравится: 321, 33 комментария • Нравится • Комментарий",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431854035_5hlhu",
+          "timestamp": "2026-07-30T17:17:34.035Z",
+          "app": "Instagram",
+          "content": "Открыть историю aidana_hey • AIDANA ☾ INFLUNCER UGC ASTANA • aidana_hey",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431852353_8d5pd",
+          "timestamp": "2026-07-30T17:17:32.353Z",
+          "app": "Instagram",
+          "content": "Фото 1 из 6 от SETTERS MEDIA, Нравится: 321, 33 комментария • Нравится • Комментарий",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431851260_3u2np",
+          "timestamp": "2026-07-30T17:17:31.260Z",
+          "app": "Instagram",
+          "content": "setters.me опубликовал(-а) carousel, 6 часов назад • Фото профиля setters.me • setters.me",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431850526_ww2y5",
+          "timestamp": "2026-07-30T17:17:30.526Z",
+          "app": "Instagram",
+          "content": "контейнер для панели видео Reels • История yeldosbaiakhmet, 0 из 27, Непросмотренное. • История yeldosbaiakhmet, 0 из 27, Непросмотренное.",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431848004_ldtz4",
+          "timestamp": "2026-07-30T17:17:28.004Z",
+          "app": "Instagram",
+          "content": "Актуальное • aksaulee_s, aknietsamatovaa и 1,603 поставили \"Нравится\" вашему комментарию: Братан меткасын қойып к... ещё 36 мин. • arachishurachis, shah01602 и 362 поставили \"Нравится\" вашему комментарию: Футбол победил в 2022 году... ещё 30 мин.",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431847888_so899",
+          "timestamp": "2026-07-30T17:17:27.888Z",
+          "app": "Instagram",
+          "content": "Уведомления",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431845623_ewoxg",
+          "timestamp": "2026-07-30T17:17:25.623Z",
+          "app": "Instagram",
+          "content": "Загрузка… • Уведомления",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431844263_ixpha",
+          "timestamp": "2026-07-30T17:17:24.263Z",
+          "app": "Home",
+          "content": "контейнер для панели видео Reels • История yeldosbaiakhmet, 0 из 27, Непросмотренное. • История yeldosbaiakhmet, 0 из 27, Непросмотренное.",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431843567_7qbam",
+          "timestamp": "2026-07-30T17:17:23.567Z",
+          "app": "Home",
+          "content": "Ясно ИКВ119 • Астана • Google",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431832720_lihnk",
+          "timestamp": "2026-07-30T17:17:12.720Z",
+          "app": "Home",
+          "content": "Настройки • Чт, 30 Июл • +7 778 917 3334",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431830064_qepgk",
+          "timestamp": "2026-07-30T17:17:10.064Z",
+          "app": "Home",
+          "content": "Ясно ИКВ119 • Астана • Google",
+          "type": "activity"
+        },
+        {
+          "id": "log_1785431667239_9smyi",
+          "timestamp": "2026-07-30T17:14:27.239Z",
+          "app": "Latin",
+          "content": "Настройки • Чт, 30 Июл • +7 778 917 3334",
+          "type": "activity"
+        }
+      ],
+      "limits": {
+        "maxDailyTimeSeconds": 14400,
+        "isLocked": false,
+        "appLimits": {}
+      }
+    }
+  }
+}

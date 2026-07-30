@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="accessibility_description">Мониторинг просматриваемого контента для родительского контроля (AppScreenControl)</string>
+    <string name="app_name">AppScreenControl</string>
+</resources>

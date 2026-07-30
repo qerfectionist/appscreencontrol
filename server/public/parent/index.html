@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Родительский Контроль</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="mobile-app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-top">
+        <div class="brand">
+          <div class="brand-logo">🛡️</div>
+          <div>
+            <h1>Родительский Контроль</h1>
+            <div class="header-subtitle">⚡ Обновление по воздуху (OTA)</div>
+          </div>
+        </div>
+        <div class="battery-chip" id="battery-chip">🔋 --%</div>
+      </div>
+
+      <!-- Child Profile Tabs -->
+      <div class="child-tabs">
+        <button class="child-tab active" data-child="brother" id="tab-brother">
+          <span class="tab-avatar">👦</span>
+          <div class="tab-info">
+            <span class="tab-name">Брат</span>
+            <span class="tab-sub" id="status-brother">Загрузка...</span>
+          </div>
+        </button>
+        <button class="child-tab" data-child="sister" id="tab-sister">
+          <span class="tab-avatar">👧</span>
+          <div class="tab-info">
+            <span class="tab-name">Сестренка</span>
+            <span class="tab-sub" id="status-sister">Загрузка...</span>
+          </div>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="app-content">
+
+      <!-- Emergency Lock Switch -->
+      <section class="card lock-banner">
+        <div class="lock-banner-row">
+          <div>
+            <h3>🔒 Экстренная Блокировка</h3>
+            <p>Мгновенно заблокировать доступ к телефону</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="toggle-instant-lock">
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div id="lock-status-msg" class="lock-banner-msg">
+          Статус: Телефон разблокирован
+        </div>
+      </section>
+
+      <!-- Overall Daily Time Limit Card -->
+      <section class="card">
+        <div class="card-title-row">
+          <h3>⏱️ Общий Дневной Лимит</h3>
+          <span class="time-badge" id="daily-limit-badge">4 ч / день</span>
+        </div>
+
+        <div class="used-time-box">
+          <span class="used-val" id="used-time-val">0 мин</span>
+          <span class="used-sub" id="used-time-sub">время за сегодня</span>
+        </div>
+
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="daily-progress-fill" style="width: 0%;"></div>
+        </div>
+
+        <div class="preset-buttons">
+          <button class="preset-btn" data-seconds="3600">1 час</button>
+          <button class="preset-btn" data-seconds="7200">2 часа</button>
+          <button class="preset-btn" data-seconds="10800">3 часа</button>
+          <button class="preset-btn" data-seconds="14400">4 часа</button>
+          <button class="preset-btn" data-seconds="0">Без лимита</button>
+        </div>
+      </section>
+
+      <!-- Smart Analytics Section -->
+      <section class="card">
+        <div class="card-title-row">
+          <h3>📊 Аналитика интересов</h3>
+          <span class="panel-sub-tag">Категории за сегодня</span>
+        </div>
+        <div id="analytics-categories-list" style="margin-top: 10px;">
+          <!-- Dynamically populated category progress bars -->
+        </div>
+      </section>
+
+      <!-- App Specific Timers Section -->
+      <section class="card">
+        <div class="card-title-row">
+          <h3>⏳ Таймеры приложений</h3>
+          <span class="panel-sub-tag">Установка лимитов на игры и соцсети</span>
+        </div>
+
+        <div class="app-timers-list" id="app-timers-list">
+          <!-- Dynamically populated with app timer controls -->
+        </div>
+
+        <button class="btn-save-limits" id="btn-save-limits">💾 Сохранить изменения таймеров</button>
+      </section>
+
+      <!-- Keyword Alert System Section -->
+      <section class="card" style="border-left: 4px solid #ef4444;">
+        <div class="card-title-row">
+          <h3>🚨 Детектор опасных слов</h3>
+          <span class="panel-sub-tag" style="color: #f87171;">Фильтр поиска и видео</span>
+        </div>
+
+        <div style="display: flex; gap: 8px; margin-top: 12px;">
+          <input type="text" id="input-new-keyword" placeholder="Добавить слово (напр. ставка)" style="flex: 1; padding: 10px; border-radius: 10px; border: 1px solid #334155; background: #1e293b; color: #fff; font-size: 14px;">
+          <button id="btn-add-keyword" style="padding: 10px 16px; background: #ef4444; border: none; border-radius: 10px; color: #fff; font-weight: 700; cursor: pointer;">+ Добавить</button>
+        </div>
+
+        <div id="keywords-chips-container" style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px;">
+          <!-- Dynamically populated keyword chips -->
+        </div>
+      </section>
+
+      <!-- Live Monitoring & What They Watched Feed -->
+      <section class="card">
+        <div class="card-title-row">
+          <h3>👁️ Что смотрит прямо сейчас</h3>
+        </div>
+
+        <div class="timeline-feed" id="parent-timeline-feed">
+          <!-- Dynamically populated activity items -->
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Navigation / Install PWA Banner -->
+    <footer class="app-footer">
+      <p>✨ Работает прямо в браузере и обновляется без скачивания файлов.</p>
+    </footer>
+  </div>
+
+  <script src="app.js?v=3"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').catch(err => console.log('SW reg error:', err));
+    }
+  </script>
+</body>
+</html>

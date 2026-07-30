@@ -1,0 +1,19 @@
+R_DEF: Internal format may change without notice
+local
+id btnCheckUpdate
+id btnGrantAccessibility
+id btnGrantBatteryOpt
+id btnGrantUsage
+id btnSaveAndStart
+id etServerUrl
+id rbBrother
+id rbSister
+id rgDeviceOwner
+id tvAccessibilityStatus
+id tvBatteryOptStatus
+id tvUsageStatus
+layout activity_main
+string accessibility_description
+string app_name
+xml accessibility_service_config
+xml file_paths

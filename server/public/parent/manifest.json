@@ -1,0 +1,21 @@
+{
+  "name": "Родительский Контроль — AppScreenControl",
+  "short_name": "Контроль",
+  "description": "Приложение управления таймерами и просмотром использования телефонов детей",
+  "start_url": "/parent/",
+  "display": "standalone",
+  "background_color": "#0b0d14",
+  "theme_color": "#8b5cf6",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3064/3064155.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3064/3064155.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

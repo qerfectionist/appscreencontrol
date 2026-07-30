@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AppScreenControl — Родительский Контроль и Аналитика</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="navbar">
+      <div class="logo">
+        <div class="logo-icon">🛡️</div>
+        <div>
+          <h1>AppScreenControl</h1>
+          <span class="subtitle">Мониторинг экранного времени и контента</span>
+        </div>
+      </div>
+
+      <div class="nav-controls">
+        <div class="live-indicator">
+          <span class="pulse-dot"></span>
+          <span id="sync-status">Синхронизация с сервером</span>
+        </div>
+        <button id="btn-seed" class="btn-secondary" title="Сбросить на демо-данные">🔄 Демо-данные</button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Device Switcher Tabs -->
+      <div class="device-tabs-container">
+        <div class="device-tabs">
+          <button class="tab-btn active" data-device="brother">
+            <span class="tab-icon">👦</span>
+            <div class="tab-text">
+              <span class="tab-title">Брат</span>
+              <span class="tab-sub" id="tab-status-brother">В сети • YouTube</span>
+            </div>
+          </button>
+          <button class="tab-btn" data-device="sister">
+            <span class="tab-icon">👧</span>
+            <div class="tab-text">
+              <span class="tab-title">Сестренка</span>
+              <span class="tab-sub" id="tab-status-sister">В сети • TikTok</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Active Device Summary Section -->
+      <section class="device-overview">
+        <!-- Metric Cards -->
+        <div class="metrics-grid">
+          <!-- Screen Time Card -->
+          <div class="metric-card glow-purple">
+            <div class="card-header">
+              <span class="card-title">Экранное время сегодня</span>
+              <span class="card-icon">⏱️</span>
+            </div>
+            <div class="metric-value" id="metric-screen-time">0 ч 0 мин</div>
+            <div class="progress-bar-container">
+              <div class="progress-bar" id="bar-screen-time" style="width: 65%;"></div>
+            </div>
+            <span class="metric-foot" id="metric-limit-info">Рекомендуемый лимит: 4 ч / день</span>
+          </div>
+
+          <!-- Current App & Status -->
+          <div class="metric-card glow-cyan">
+            <div class="card-header">
+              <span class="card-title">Текущая активность</span>
+              <span class="card-icon">📱</span>
+            </div>
+            <div class="metric-value status-badge" id="metric-current-app">YouTube</div>
+            <div class="device-status-row">
+              <span id="metric-online-dot" class="status-dot online"></span>
+              <span id="metric-online-text">В сети</span>
+              <span class="dot-separator">•</span>
+              <span id="metric-last-seen">Обновлено только что</span>
+            </div>
+          </div>
+
+          <!-- Battery Level -->
+          <div class="metric-card glow-green">
+            <div class="card-header">
+              <span class="card-title">Заряд батареи</span>
+              <span class="card-icon">🔋</span>
+            </div>
+            <div class="metric-value" id="metric-battery">85%</div>
+            <div class="progress-bar-container">
+              <div class="progress-bar green" id="bar-battery" style="width: 85%;"></div>
+            </div>
+            <span class="metric-foot" id="metric-device-model">Android Device</span>
+          </div>
+
+          <!-- Top App -->
+          <div class="metric-card glow-amber">
+            <div class="card-header">
+              <span class="card-title">Главное увлечение</span>
+              <span class="card-icon">🔥</span>
+            </div>
+            <div class="metric-value" id="metric-top-app">YouTube</div>
+            <span class="metric-foot" id="metric-top-app-time">2 ч 30 мин сегодня</span>
+          </div>
+        </div>
+
+        <!-- Charts & App Breakdown Section -->
+        <div class="grid-2col">
+          <!-- Apps List & Progress -->
+          <div class="panel">
+            <div class="panel-header">
+              <h2>📊 Использование приложений</h2>
+              <span class="badge" id="apps-count-badge">4 приложения</span>
+            </div>
+            <div class="apps-list" id="apps-list-container">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Chart Panel -->
+          <div class="panel">
+            <div class="panel-header">
+              <h2>📈 Распределение времени</h2>
+            </div>
+            <div class="chart-wrapper">
+              <canvas id="usageChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Realtime Content Feed (What they watch / search) -->
+        <div class="panel full-width">
+          <div class="panel-header">
+            <div>
+              <h2>👁️ Лента активности (Что смотрят / ищут)</h2>
+              <p class="panel-sub">Перехваченные заголовки видео, поисковые запросы и действия через Accessibility Service</p>
+            </div>
+
+            <div class="feed-controls">
+              <input type="text" id="feed-search" placeholder="🔍 Поиск по названию или видео..." class="search-input">
+              <select id="feed-filter" class="select-filter">
+                <option value="all">Все категории</option>
+                <option value="video">📺 Видео</option>
+                <option value="search">🔍 Поиск</option>
+                <option value="app">📱 Приложения</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="timeline-container" id="timeline-container">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Simulation Tool for testing -->
+        <div class="panel simulator-panel">
+          <div class="panel-header">
+            <h2>🧪 Симулятор активности (Для тестирования)</h2>
+            <p class="panel-sub">Симулируйте отправку данных с Android-телефона прямо в дашборд</p>
+          </div>
+          <div class="sim-actions">
+            <button class="btn-action" onclick="simulateActivity('YouTube', 'Смотрит видео: Летсплей по Roblox', 'video')">▶️ Смотрит YouTube</button>
+            <button class="btn-action" onclick="simulateActivity('TikTok', 'Смотрит тренд: Смешные коты', 'video')">🎵 Смотрит TikTok</button>
+            <button class="btn-action" onclick="simulateActivity('Chrome', 'Искал: Решебник по математике 7 класс', 'search')">🔍 Поиск в Chrome</button>
+            <button class="btn-action" onclick="simulateActivity('Free Fire', 'Запущена игра: Free Fire', 'app')">🎮 Запуск игры</button>
+          </div>
+        </div>
+
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
