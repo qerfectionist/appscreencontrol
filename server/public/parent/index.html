@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#000000">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="stylesheet" href="style.css?v=10">
+  <link rel="stylesheet" href="style.css?v=20">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -107,37 +107,6 @@
         </div>
       </section>
 
-      <!-- App Specific Timers Section -->
-      <section class="card">
-        <span class="section-label">Ограничения приложений</span>
-        <div class="card-title-row">
-          <h3>⏳ Лимиты на игры и соцсети</h3>
-        </div>
-
-        <div class="app-timers-list" id="app-timers-list">
-          <!-- Dynamically populated app timer items -->
-        </div>
-
-        <button class="btn-save-limits" id="btn-save-limits">Сохранить лимиты</button>
-      </section>
-
-      <!-- Keyword Alert System Section -->
-      <section class="card" style="border-left: 3px solid #ff453a;">
-        <span class="section-label" style="color: #ff453a;">Безопасность поиска</span>
-        <div class="card-title-row">
-          <h3>🚨 Детектор опасных слов</h3>
-        </div>
-
-        <div style="display: flex; gap: 8px; margin-top: 10px;">
-          <input type="text" id="input-new-keyword" placeholder="Слово-триггер (напр. ставка)" style="flex: 1; padding: 10px 14px; border-radius: 12px; border: 0.5px solid rgba(255,255,255,0.15); background: rgba(118,118,128,0.2); color: #fff; font-size: 13px; outline: none;">
-          <button id="btn-add-keyword" style="padding: 10px 16px; background: #ff453a; border: none; border-radius: 12px; color: #fff; font-weight: 700; font-size: 13px; cursor: pointer; box-shadow: 0 4px 12px rgba(255,69,58,0.3);">+ Добавить</button>
-        </div>
-
-        <div id="keywords-chips-container" style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px;">
-          <!-- Dynamically populated keyword chips -->
-        </div>
-      </section>
-
       <!-- Live Activity Feed -->
       <section class="card">
         <span class="section-label">Мониторинг</span>
@@ -158,10 +127,10 @@
     </footer>
   </div>
 
-  <script src="app.js?v=10"></script>
+  <script src="app.js?v=20"></script>
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js?v=10').catch(err => console.log('SW reg error:', err));
+      navigator.serviceWorker.register('sw.js?v=20').catch(err => console.log('SW reg error:', err));
     }
   </script>
 </body>

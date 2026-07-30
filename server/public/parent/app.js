@@ -1,14 +1,5 @@
 let currentChild = 'brother';
 let devicesData = {};
-let currentKeywords = [];
-
-const APPS_LIST = [
-  { name: 'YouTube', icon: '▶️' },
-  { name: 'TikTok', icon: '🎵' },
-  { name: 'Free Fire', icon: '🎮' },
-  { name: 'Instagram', icon: '📸' },
-  { name: 'Chrome', icon: '🌐' }
-];
 
 function formatSeconds(secs) {
   if (!secs || secs === 0) return '0 мин';
@@ -43,8 +34,6 @@ function renderUI() {
   updateTabSubtitles();
   const dev = devicesData[currentChild];
   if (!dev) return;
-
-  currentKeywords = dev.keywords || [];
 
   // Battery Indicator
   const batVal = dev.battery || 100;
@@ -98,12 +87,6 @@ function renderUI() {
   // Category Analytics Breakdown
   renderCategoryAnalytics(dev.apps || [], totalSecs);
 
-  // App Specific Timers List
-  renderAppTimers(limits.appLimits || {});
-
-  // Keyword Chips
-  renderKeywordChips(currentKeywords);
-
   // Timeline Feed
   renderFeed(dev.logs || []);
 }
@@ -154,56 +137,6 @@ function renderCategoryAnalytics(apps, totalSecs) {
       </div>
     `;
   }).join('');
-}
-
-function renderAppTimers(appLimits) {
-  const container = document.getElementById('app-timers-list');
-  container.innerHTML = APPS_LIST.map(app => {
-    const limitSecs = appLimits[app.name] || 0;
-    return `
-      <div class="timer-item">
-        <div class="timer-app-name">
-          <span>${app.icon}</span>
-          <span>${app.name}</span>
-        </div>
-        <select class="timer-select" data-app="${app.name}">
-          <option value="0" ${limitSecs === 0 ? 'selected' : ''}>Без лимита</option>
-          <option value="1800" ${limitSecs === 1800 ? 'selected' : ''}>30 мин</option>
-          <option value="3600" ${limitSecs === 3600 ? 'selected' : ''}>1 час</option>
-          <option value="5400" ${limitSecs === 5400 ? 'selected' : ''}>1.5 часа</option>
-          <option value="7200" ${limitSecs === 7200 ? 'selected' : ''}>2 часа</option>
-        </select>
-      </div>
-    `;
-  }).join('');
-}
-
-function renderKeywordChips(keywords) {
-  const container = document.getElementById('keywords-chips-container');
-  if (!keywords || keywords.length === 0) {
-    container.innerHTML = '<span style="color: var(--text-secondary); font-size: 12px;">Нет ключевых слов</span>';
-    return;
-  }
-
-  container.innerHTML = keywords.map(kw => `
-    <span style="background: rgba(255, 69, 58, 0.18); color: #ff453a; border: 0.5px solid rgba(255, 69, 58, 0.35); padding: 5px 12px; border-radius: 20px; font-size: 12px; display: inline-flex; align-items: center; gap: 6px; font-weight: 600;">
-      ⚠️ ${escapeHtml(kw)}
-      <button onclick="removeKeyword('${escapeHtml(kw)}')" style="background: none; border: none; color: #ff453a; font-size: 14px; cursor: pointer; padding: 0; line-height: 1;">&times;</button>
-    </span>
-  `).join('');
-}
-
-async function removeKeyword(kw) {
-  try {
-    await fetch('/api/parent/keywords', {
-      method: 'DELETE',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ keyword: kw })
-    });
-    loadData();
-  } catch (e) {
-    console.error('Delete keyword error:', e);
-  }
 }
 
 function renderFeed(logs) {
@@ -282,47 +215,6 @@ document.querySelectorAll('.preset-btn').forEach(btn => {
       console.error('Limit set error:', err);
     }
   });
-});
-
-// Add Forbidden Keyword
-document.getElementById('btn-add-keyword').addEventListener('click', async () => {
-  const input = document.getElementById('input-new-keyword');
-  const kw = input.value.trim();
-  if (!kw) return;
-
-  try {
-    await fetch('/api/parent/keywords', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ keyword: kw })
-    });
-    input.value = '';
-    loadData();
-  } catch (err) {
-    console.error('Add keyword error:', err);
-  }
-});
-
-// Save App-Specific Timers
-document.getElementById('btn-save-limits').addEventListener('click', async () => {
-  const appLimits = {};
-  document.querySelectorAll('.timer-select').forEach(sel => {
-    const app = sel.getAttribute('data-app');
-    const val = parseInt(sel.value);
-    appLimits[app] = val;
-  });
-
-  try {
-    await fetch('/api/parent/limits', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ deviceId: currentChild, appLimits: appLimits })
-    });
-    alert('✅ Лимиты успешно сохранены!');
-    loadData();
-  } catch (err) {
-    console.error('Save limits error:', err);
-  }
 });
 
 // Auto-refresh every 3s
